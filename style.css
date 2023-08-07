@@ -1,14 +1,10 @@
 /*
  * Globals
  */
-
-
-/* Custom default button */
-.btn-light,
-.btn-light:hover,
-.btn-light:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -16,20 +12,32 @@
  * Base structure
  */
 
-body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
-
-.cover-container {
-  max-width: 42em;
-}
+body {}
 
 
 /*
  * Header
  */
-
+ .banner-wrap{
+  background-image: url(https://scontent-jnb1-1.xx.fbcdn.net/v/t1.18169-9/15094453_2129016790577175_4481686925538260246_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_eui2=AeF5M4nBHwXMmSMsYmx4z4YJEwd_NrJqP0wTB382smo_TOrhXwnUJydkhyObrT5bB29Fx3Hrl8EQbXHkUdjOORvc&_nc_ohc=_qLZ5BPE_M8AX9eSwze&_nc_ht=scontent-jnb1-1.xx&oh=00_AfCq039IfA0jVlH9QDdvUkWNMri3AaZ7sqRWWjv_CouE9A&oe=64F86DBE);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  /* important */
+  z-index: 1;
+}
+/* overlay of banner-wrap */
+.overlay{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+}
 .nav-masthead .nav-link {
   color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
